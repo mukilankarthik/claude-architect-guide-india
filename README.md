@@ -1,8 +1,17 @@
 # Claude Certified Architect – Foundations: A Simple Prep Guide 🇮🇳
 
+[![Credly Verified Badge](https://img.shields.io/badge/Credly-Verified%20Badge-orange?logo=credly&logoColor=white)](https://www.credly.com/badges/b0a2b60a-f073-49f5-b106-ce33e8cf8aa4/public_url)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Languages](https://img.shields.io/badge/Languages-EN%20%7C%20HI%20%7C%20TA-brightgreen)](#what-is-this-certification)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+
 A no-nonsense, beginner-friendly guide to help you clear the **Claude Certified Architect – Foundations** exam by Anthropic — written for people preparing in India, with notes also available in Hindi and Tamil.
 
-> I cleared this certification myself. This repo is my attempt to make the path a little shorter for the next person. It's not official Anthropic material — just a simple map of what to study and in what order.
+> I cleared this certification myself — [view my verified Credly badge ↗](https://www.credly.com/badges/b0a2b60a-f073-49f5-b106-ce33e8cf8aa4/public_url). This repo is my attempt to make the path a little shorter for the next person. It's not official Anthropic material — just a simple map of what to study and in what order.
+
+<a href="https://www.credly.com/badges/b0a2b60a-f073-49f5-b106-ce33e8cf8aa4/public_url">
+  <img src="https://images.credly.com/images/f2040db3-3904-4240-8966-e87b1510bea0/linkedin_thumb_blob" alt="Claude Certified Architect - Foundations, issued by Anthropic" width="150">
+</a>
 
 **Languages:** [English](README.md) · [हिन्दी](guides/guide_hi.md) · [தமிழ்](guides/guide_ta.md)
 
