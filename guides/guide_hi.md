@@ -86,6 +86,15 @@
 
 ---
 
+## असली परीक्षा से पहले अभ्यास करें
+
+मैंने एक छोटा-सा मुफ़्त app बनाया है जिसमें परीक्षा जैसे ही स्टाइल के अभ्यास सवाल हैं — असली परीक्षा बुक करने से पहले आख़िरी जाँच के लिए उपयोगी।
+
+- **आज़माएँ:** [claude-architect-cert-app.streamlit.app](https://claude-architect-cert-app.streamlit.app/)
+- **Source:** [github.com/mukilankarthik/claude-architect-cert-app](https://github.com/mukilankarthik/claude-architect-cert-app)
+
+---
+
 ## अक्सर पूछे जाने वाले सवाल
 
 **क्या पेड कोर्स ज़रूरी है?**

@@ -86,6 +86,15 @@ Claude-ஐப் பயன்படுத்தி இதுவரை எது�
 
 ---
 
+## உண்மையான தேர்வுக்கு முன் பயிற்சி செய்யுங்கள்
+
+தேர்வு பாணியிலேயே பயிற்சி கேள்விகளைத் தீர்க்க ஒரு சிறிய இலவச app உருவாக்கியுள்ளேன் — உண்மையான தேர்வை பதிவு செய்யும் முன் ஒரு இறுதி சரிபார்ப்புக்கு பயனுள்ளது.
+
+- **முயற்சிக்க:** [claude-architect-cert-app.streamlit.app](https://claude-architect-cert-app.streamlit.app/)
+- **Source:** [github.com/mukilankarthik/claude-architect-cert-app](https://github.com/mukilankarthik/claude-architect-cert-app)
+
+---
+
 ## அடிக்கடி கேட்கப்படும் கேள்விகள்
 
 **Paid கோர்ஸ் தேவையா?**

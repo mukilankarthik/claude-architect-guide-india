@@ -89,6 +89,15 @@ Based on shared experience across people who've taken this exam, these are the c
 
 ---
 
+## Practice before the real exam
+
+I built a small free app to drill practice questions in the same style as the exam — useful for a final sanity check before you book the real thing.
+
+- **Try it:** [claude-architect-cert-app.streamlit.app](https://claude-architect-cert-app.streamlit.app/)
+- **Source:** [github.com/mukilankarthik/claude-architect-cert-app](https://github.com/mukilankarthik/claude-architect-cert-app)
+
+---
+
 ## FAQ
 
 **Do I need a paid course?**
