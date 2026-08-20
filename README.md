@@ -78,6 +78,20 @@ The exam draws 4 scenarios (picked at random) out of a published set of 6: custo
 
 ---
 
+## Step 2.5 — The one mental model that answers most scenario questions
+
+Nearly every scenario question is a variation of one loop. Learn it once instead of memorizing 60 separate cases.
+
+**Five actors:** User/entry point → **the harness** (your deterministic code) → **the model** (Claude, reasoning only) → **Claude API** (the boundary between them) → **tool backends** (the real database/payment rail/API a tool call reaches).
+
+**The loop:** assemble context → call the model → model returns a decision (`end_turn` or `tool_use`) → harness checks the requested tool call against hard rules (spend limits, permission scopes) *before* running it → tool executes → result feeds back → repeat until done or escalated.
+
+**The one line worth memorizing:** *the model decides, the harness executes.* Claude's job ends at returning a structured decision — whether that decision is allowed to become a real action is the harness's call. This is why a limit ("never refund over ₹15,000 without review") has to be a code-level `if`, not a stronger sentence in the system prompt — no prompt wording is a guarantee, and a differently-phrased request can talk a model past an instruction that a hard-coded check would have blocked every time.
+
+When a question asks "why did the agent do X" or "what would have prevented X," first ask: is this a missing-context problem, a model-reasoning problem, or a missing/weak gate? Most "design a safer system" questions are really asking you to add a gate.
+
+---
+
 ## Step 3 — Build one small thing before you sit the exam
 
 You don't need anything fancy. A weekend project is enough:
@@ -101,6 +115,9 @@ Based on shared experience across people who've taken this exam, these are the c
 3. **Reaching for an agent when a workflow (or a single call) would do.** More autonomy = less predictability. The exam rewards restraint. ([Building Effective Agents](https://www.anthropic.com/research/building-effective-agents))
 4. **Confusing MCP tools and resources.** Not everything the model needs should be a "tool call" — sometimes just handing over the content as a resource is cheaper and more reliable. ([MCP tools](https://modelcontextprotocol.io/docs/concepts/tools) vs. [MCP resources](https://modelcontextprotocol.io/docs/concepts/resources))
 5. **Ignoring resumability.** If your multi-step pipeline can't pick up from where it failed, every failure costs you the whole run — and that's a real architecture flaw, not a minor detail. ([Context windows](https://platform.claude.com/docs/en/build-with-claude/context-windows))
+6. **Enforcing a hard limit in the system prompt instead of in code.** "Never approve refunds over ₹15,000" as prompt wording is a request the model can be talked past by an unusual enough phrasing. The same rule as a harness-level check before the tool executes is a guarantee. If a question describes a limit being violated, the fix is almost always a code-level gate, not a stronger sentence.
+7. **Assuming subagents share context automatically.** A coordinator's subagents are isolated by default — if the coordinator doesn't explicitly pass one subagent's output into the next one's prompt, the second subagent genuinely has no idea the first one ran. "Its context window was too small" is a common wrong answer when the real cause is "nobody passed the data."
+8. **Treating schema-valid as correct.** A JSON response can pass schema validation (right types, right shape) and still be semantically wrong — line items that don't sum to the stated total, a date that doesn't match the source. Validation-retry loops fix format errors; they don't fix meaning errors, which need their own check.
 
 ---
 
